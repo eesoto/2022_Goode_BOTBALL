@@ -1,0 +1,18 @@
+
+int main()
+{
+    printf("Hello World\n");
+    set_servo_position (0, 451);
+    set_servo_position (3, 331);
+    enable_servos();
+    motor(0, 100);
+    motor(3, 100);
+    msleep(3000);
+    motor(0, -100);
+    motor(3, 100);
+    msleep(900);
+   
+    disable_servos();
+    ao();
+    return 0;
+}
